@@ -12,7 +12,9 @@ public class FormatOutputDemo {
     System.out.printf("Interest is %4.2f", interest); // Interest is 16.40
                                                       // 4.2 => 4 為數字的寬度, .2 為保留幾位小數
     System.out.println();
-    System.out.printf("%3d # %2s # %4.2f \n", 1234, "Java", 51.6653);
+    System.out.printf("%3d # %2s # %4.2f \n", 1234, "Java", 51.6653); // 1234 # Java # 51.67
+                                                                      // %d 用於『int』的佔位符號
+                                                                      // %S 用於『字串』的佔位符號
 
     System.out.printf("%8d %8s %8.1f\n", 1234, "Java", 5.63); // 8s 字符串數量為8，不足會自動補齊
     System.out.printf("%-8d%-8s%-8.1f\n", 1234, "Java", 5.63); // '%-8d'中的'-' 是向左對齊

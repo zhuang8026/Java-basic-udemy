@@ -10,7 +10,7 @@ public class ConvertStringAndNumber {
 
     System.out.println(Double.parseDouble(s1)); // 123.0 (轉double )
 
-    String s2 = 123 + "";
+    String s2 = 123 + ""; // "123"
     System.out.println(s2);
 
   }

@@ -25,12 +25,14 @@ public class Palindrome {
     int high = s.length() - 1;
 
     boolean isPalindrome = true;
-    while (low < high) {
+    while (low < high) { // low 會一直加到比high高為止
+      // charAt(int) 查看 string 的內容
       if (s.charAt(low) != s.charAt(high)) {
         isPalindrome = false;
         break;
       }
-
+      System.out.println("low：" + low);
+      System.out.println("high：" + high);
       low++;
       high--;
     }

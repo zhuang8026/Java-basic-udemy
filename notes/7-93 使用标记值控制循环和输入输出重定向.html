@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    1. local ex: src/main/java/loop/whileLoopDemo/SentinelValue.java
+    1-1.
+      第一步 -> 將 package loop.whileLoopDemo; 註解
+      第二步 -> 使用命令 javac
+              -> javac SentinelValue 編譯會出現 SentinelValue.class(自解碼文件)
+
+    2. 輸入 重定向:
+          -> java SentinelValue < input.txt  (input.txt 送入 SentinelValue)
+    3. 輸出 重定向:
+          -> java SentinelValue > output.txt (SentinelValue 存入 output.txt)
+    4. 輸入 輸出 重定向:
+          -> java SentinelValue < input.txt > output.txt
+    5. 準備一個 input.txt 文件
+        -> java SentinelValue < input.txt
+        -> java SentinelValue < input.txt > output.txt
+                              -> 先輸入 -> 在輸出 (output.txt 自動生成)
+
+</body>
+</html>

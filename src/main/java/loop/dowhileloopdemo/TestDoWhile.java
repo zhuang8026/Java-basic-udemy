@@ -17,9 +17,8 @@ public class TestDoWhile {
     // Keep reading data until the input is 0
     do {
       // Read the next data
-      System.out.print(
-          "Enter an integer (the input ends if it is 0): ");
-      data = input.nextInt();
+      System.out.print("Enter an integer (the input ends if it is 0): ");
+      data = input.nextInt(); // 將輸入的值賦值給 data
 
       sum += data;
     } while (data != 0);

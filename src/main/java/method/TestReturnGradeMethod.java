@@ -7,6 +7,7 @@ public class TestReturnGradeMethod {
     System.out.print("\nThe grade is " + getGrade(59.5));
   }
 
+  // 輸入 double 返回 char
   public static char getGrade(double score) {
     if (score >= 90.0) {
       return 'A';

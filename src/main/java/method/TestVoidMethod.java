@@ -10,6 +10,7 @@ public class TestVoidMethod {
     printGrade(59.5);
   }
 
+  // void 不帶任何返回值
   public static void printGrade(double score) {
     if (score<0 || score>100){
       return;

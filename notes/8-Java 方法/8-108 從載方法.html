@@ -6,9 +6,17 @@
 </head>
 <body>
 
-   1.
-   2.
-   3.
+  1. demo :
+  -> src/main/java/method/TestMethodOverloading.java
+   2. 什麼是重載方法？
+      -> 一個方法中，傳入的參數有好幾種型態
+        -> max (int i, int s) {...}
+        -> max (int i, int s, int x) {...}
+        -> max (double i, double s, double x) {...}
+        -> max (int i, float s, double x) {...}
+        -> 也就是說 可以定義很多種，俗稱 "重載"
+   3. 使用方法時，傳入的參數 更接近入那個 類型，就會去調用相對應的方法（必須要有定義過，不然還是會報錯），如果沒有
+      找到相對應的方法，會直接抱錯。
    4.
    5.
    6.

@@ -17,12 +17,12 @@ public class GreatestCommonDivisorMethod {
     System.out.print("Enter second integer: ");
     int n2 = input.nextInt();
 
-    System.out.println("The greatest common divisor for " + n1 +
-        " and " + n2 + " is " + gcd(n1, n2));
+    System.out.println("The greatest common divisor for " + n1 + " and " + n2 + " is " + gcd(n1, n2)); // 調用component method gcd
   }
 
   /**
    * Return the gcd of two integers
+   * 模塊化 概念 -> component
    */
   public static int gcd(int n1, int n2) {
     int gcd = 1; // Initial gcd is 1

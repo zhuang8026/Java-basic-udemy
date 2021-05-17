@@ -44,7 +44,6 @@ public class ArraysClassDemo {
 
     System.out.println(Arrays.toString(list));
 
-
   }
 
 }

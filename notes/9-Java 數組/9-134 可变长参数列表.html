@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  demo：
+    -> src/main/java/onedimensionalarray/VarArgsDemo.java
+    1. 重點：
+      -> "..." 為可變長參數
+        -> 使用之後，傳入method的時候，會被java 編譯成 數組 來對待
+    2. 正確使用方法
+      -> [ok ] public static void printMax(double... numbers) { ... }
+      -> [ok ] public static void printMax(int s, double... numbers) { ... }
+      -> [ X ] public static void printMax(double... numbers, double... numbersV2) { ... }
+      -> [ X ] public static void printMax(double... numbers, int s) { ... }
+</body>
+</html>

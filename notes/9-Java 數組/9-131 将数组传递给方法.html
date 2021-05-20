@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  demo：
+    -> src/main/java/onedimensionalarray/TestPassArray.java
+    1. 重點：
+        int[] a = {1,2,3};
+        -> method( a[0], a[1] ); // 值傳遞
+          -> 對 數組 來說不會有任何改變（因為只要是傳遞值，他會直接複製一個全新參數放入記憶體中）
+        -> method( a ); // 引用傳遞
+          -> method 中，只要有對 a 進行任何操作，都會對 原始數組 修改（因為是 reference，他們引用的是同一個記憶體）
+</body>
+</html>

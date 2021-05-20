@@ -115,8 +115,33 @@ public class ArrayDemo {
         }
 
 
-    }
+        int[] myListss = {1, 2, 3, 4, 5, 6};
+        for (int i = myListss.length - 2; i >= 0; i--) {
+            myListss[i + 1] = myListss[i];
+            // 5 = 4 , 123465
+            // 4 = 3 , 123645
+            // 3 = 2 , 126345
+            // 2 = 1 , 162345
+            // 1 = 0 , 112345
+        }
 
+        for (int e: myListss)
+            System.out.print(e + " ");
+
+        System.out.println(" ");
+
+        int listsss[] = {1, 2, 3, 4, 5, 6};
+        for (int i = 1; i < listsss.length; i++) {
+            listsss[i] = listsss[i - 1];
+            // 1 = 0 , 113456
+            // 2 = 1 , 111456
+            // 3 = 2 , 111156
+            // 4 = 3 , 111116
+            // 5 = 4 , 111111
+        }
+        for (int i = 0; i < listsss.length; i++)
+            System.out.print(listsss[i] + " ");
+    }
 
     public static void showArrayElement(int[] array) {
         for (int i = 0; i < array.length; i++) {

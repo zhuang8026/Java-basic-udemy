@@ -17,8 +17,7 @@ public class RecursiveBinarySearch {
     return recursiveBinarySearch(list, key, low, high);
   }
 
-  private static int recursiveBinarySearch(int[] list, int key,
-      int low, int high) {
+  private static int recursiveBinarySearch(int[] list, int key, int low, int high) {
     if (low > high)  // The list has been exhausted without a match
     {
       return -low - 1;

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  demo：
+    -> src/main/java/onedimensionalarray/ArrayCopyDemo.java
+     1. 錯誤概念：
+        [X] list1 = list2
+     2. 第一種複製 array
+        int[] i = {1,2,3,4};
+        int[] s = new int[i.length];
+        for( int x=0; x < i.length; i++ ){
+          s[i] = i[x];
+        }
+     3. 第二種複製 array
+        -> arraycopy 為靜態方法
+        -> arraycopy(原始數組, 原始數組起始位置, 目標數組, 目標數組起始位置, 原始數組多少元素複製到目標數組中);
+        -> arraycopy(originArray, or_pos, targetArray, tar_pos, originArray.length);
+          -> arraycopy(arr1, 0 , arr2, 0, arr1.length);
+            -> 從arr1下標為0開始複製 到 arr2 下標為0的位置，並複製 arr1.length 個
+     4.
+     5.
+     6.
+     6.
+
+</body>
+</html>

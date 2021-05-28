@@ -23,6 +23,8 @@ public class TestPassObject {
    */
   public static void printAreas(CircleWithPrivateDataFields c, int times) {
     System.out.println("Radius \t\tArea");
+
+    // 5 4 3 2 1 0 => 6次
     while (times >= 1) {
       System.out.println(c.getRadius() + "\t\t" + c.getArea());
       c.setRadius(c.getRadius() + 1);

@@ -59,6 +59,6 @@ public class TV {
         "channel=" + channel +
         ", volumeLevel=" + volumeLevel +
         ", on=" + on +
-        '}'+"is demo by andrew";
+        '}' + "is demo by andrew";
   }
 }

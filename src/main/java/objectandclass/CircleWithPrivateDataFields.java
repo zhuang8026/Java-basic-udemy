@@ -16,7 +16,8 @@ public class CircleWithPrivateDataFields {
    * Construct a circle with radius 1
    */
   public CircleWithPrivateDataFields() {
-    this(1);
+    this(1); // this 關鍵字是用於調用另一個構造方法：27行
+                       // this 在構造方法中，必須必須放在所有可執行的語句的最前面，所以this不可和21行換位置
     numberOfObjects++;
 
   }
@@ -24,9 +25,10 @@ public class CircleWithPrivateDataFields {
   /**
    * Construct a circle with a specified radius
    */
-  public CircleWithPrivateDataFields(double radius) {
-    this.radius = radius;
-    numberOfObjects++;
+  public CircleWithPrivateDataFields(double radiussss) {
+    this.radius = radiussss; // this 指向 類 本身，this 可不寫，是自動隱藏
+//    numberOfObjects++;
+    CircleWithPrivateDataFields.numberOfObjects++; // 靜態變量是不能使用this呼叫，必須使用類來引用
   }
 
   /**

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  說明：
+    1. 類 其實就是一個模板，他定義了一個類的行為、變量、方法，這樣就可以無限 實例化 出很多個實體(new class xxx)
+    ex:
+      // Create a Main class
+      public class Main {
+        int x;
+
+        // Create a class constructor for the Main class
+        // constructor 用於初始化 類
+        public Main(int i) {
+          x = i;
+        }
+
+        public static void main(String[] args) {
+          Main myObj = new Main(99999);
+          System.out.println(myObj.x); // 99999
+        }
+      }
+
+</body>
+</html>

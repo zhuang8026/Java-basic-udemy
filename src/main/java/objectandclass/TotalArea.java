@@ -15,12 +15,10 @@ public class TotalArea {
 
   /** Create an array of Circle objects */
   public static CircleWithPrivateDataFields[] createCircleArray() {
-    CircleWithPrivateDataFields[] circleArray = 
-      new CircleWithPrivateDataFields[5];
+    CircleWithPrivateDataFields[] circleArray = new CircleWithPrivateDataFields[5]; // 數組長度為5
 
     for (int i = 0; i < circleArray.length; i++) {
-      circleArray[i] = 
-        new CircleWithPrivateDataFields(Math.random() * 100);
+      circleArray[i] = new CircleWithPrivateDataFields(Math.random() * 100);
     }
 
     // Return Circle array
@@ -28,8 +26,7 @@ public class TotalArea {
   }
 
   /** Print an array of circles and their total area */
-  public static void printCircleArray(
-      CircleWithPrivateDataFields[] circleArray) {
+  public static void printCircleArray( CircleWithPrivateDataFields[] circleArray ) {
     System.out.printf("%-30s%-15s\n", "Radius", "Area");
     for (int i = 0; i < circleArray.length; i++) {
       System.out.printf("%-30f%-15f\n", circleArray[i].getRadius(),

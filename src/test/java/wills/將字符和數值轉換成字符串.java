@@ -1,28 +1,22 @@
-package objectandclass;
+package wills;
 
-public class StringStudy5 {
+public class 將字符和數值轉換成字符串 {
 
   public static void main(String[] args) {
-    int a = 1;
+    Integer a = 1;
     String b = String.valueOf(a);
     System.out.println(b);
-    System.out.println(b instanceof String);
+    System.out.println(b instanceof String); // b 是不是 String 的實例
+    System.out.println(a instanceof Integer);
 
     String c = a + "";
     System.out.println(c instanceof String);
 
     String d = String.valueOf('a');
     System.out.println(d);
-    System.out.println(d instanceof String);
 
     String e = String.valueOf(true);
     System.out.println(e instanceof String);
     System.out.println(e);
-
-    String str = "99";
-    Integer i = Integer.valueOf(str);
-    System.out.println(i);
-    System.out.println(i instanceof Integer);
   }
-
 }

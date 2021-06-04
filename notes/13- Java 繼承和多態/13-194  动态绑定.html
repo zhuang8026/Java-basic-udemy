@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    URL : src/main/java/objectandclass/typecast/PolymorphismDemo.java
+
+   1. 動態綁定
+      -> Object a = new C4();
+         sout(a.toString());
+      -> Object => 是 聲明類型
+      -> C2     => 是 實際類型
+
+   2. -> C1 -> C2 -> C3 -> C4 -> C5
+      -> 說明：
+          a.toString(); 會優先找C4是否有toString方法，然後才去找父類(C3 -> C2 -> C1) 是否有 toString() 這個方法，
+          依次從父類找到子類，直到找到 toString()這個實現方法 為止。
+   3. 重點:
+        ex: 父類 Fruit
+            子類 Apple Orange
+        -> Fruit ap = new apple();
+        -> Fruit og = new Orange();
+        問題: 為什麼不直接 "Apple ap = new Apple();" ?
+              因為: Fruit 算是 Apple 的父類型，這樣 ap 就可以接受各種 子類型 的值。
+                    流程應該是 Fruit ap = new apple();
+                              Orange og = (Orange)ap;
+                              此流程成為 通用的程序設計
+    4.
+   5.
+   6.
+   6.
+
+</body>
+</html>

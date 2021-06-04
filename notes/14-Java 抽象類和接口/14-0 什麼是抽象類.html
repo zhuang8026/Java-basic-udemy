@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   1.   什麼是 抽象類 abstract
+        因為有時候很多class都會有重複的method
+        來代表他們是同一族群的class
+        可以達到多形讓程式碼 耦合 度下降  增加重用性
+   2.   抽象方法不能出現在 非 抽象類中。
+        -> 2-1 如果父類中有 抽象方法，那麼，父類也必須被 抽象關鍵字 所定義。
+        -> 2-2 如果父類是抽象類，他的子類是非抽象子類，那麼，子類就必須實現父類中所有的 抽象方法。
+        -> 2-3 抽象方法 必須是 非靜態的。
+
+       2-1. ex:
+            public abstract class 父類 {
+              ...
+              public abstract int getInt();
+              public abstract void setInt(int i) { ... };
+            }
+       2-2. ex:
+             // 方法1：子類自己定義成 抽象類(abstract)
+             public abstract class 子類 extends 父類 {
+               ...
+               public abstract int getInt();
+               public abstract void setInt(int i) { ... };
+             }
+             // 方法2：子類 實現 父類中定義的 抽象方法
+             public class 子類 extends 父類 {
+             @override
+             public int getInt(){ ... };
+             @override
+             public void setInt(int i) { ... };
+             }
+   3. 抽象類 不能被 new操作符來初始化。
+      抽象類中的構造方法，可以通過子類來調用。
+       ex:
+         public static void main(String[] args) {
+         // 父類 fa = new 父類(); // 錯誤
+            子類 child = new 子類(); // 可以通過子類來調用 父類的構造方法
+         }
+   4. 抽象類中，不一定需要 抽象方法。
+   5. 抽象類雖然不能使用 new操作符，但抽象類可以用作一種數據類型。
+      父類[] obj = new 父類[10];
+      obj[1] = new 子類();
+
+   6. 補充：
+      -> 在父抽象類中, 抽象方法是沒有方法體的，被子類繼承之後，實現抽象方法之後，才能有方法體
+
+   7. Number 類就是最典型的抽象類別
+
+</body>
+</html>

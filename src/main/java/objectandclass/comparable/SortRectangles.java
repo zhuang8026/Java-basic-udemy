@@ -12,9 +12,10 @@ public class SortRectangles {
         new ComparableRectangle(1.4, 25.4),
     };
 
-    Arrays.sort(rectangles);
-    for (Rectangle rectangle : rectangles) {
-      System.out.println(rectangle + " ");
+    Arrays.sort(rectangles); // sort 自身有 implements Comparable，所以在使用sort方法的時候，會使用 compareTo 和 toString
+
+    for (Rectangle rec : rectangles) {
+      System.out.println(rec + " ");
       System.out.println();
     }
   }

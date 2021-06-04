@@ -1,4 +1,4 @@
-package objectandclass;
+package objectandclass.extendsAndPolymorphism;
 
 import java.util.Scanner;
 
@@ -15,9 +15,11 @@ public class PalindromeIgnoreNonAlphanumeric {
     System.out.print("Enter a string: ");
     String s = input.nextLine();
 
+    boolean bo = isPalindrome(s);
+
     // Display result
     System.out.println("Ignoring non-alphanumeric characters, \nis "
-        + s + " a palindrome? " + isPalindrome(s));
+        + s + " a palindrome? " + bo);
   }
 
   /**
@@ -42,8 +44,10 @@ public class PalindromeIgnoreNonAlphanumeric {
     StringBuilder stringBuilder = new StringBuilder();
 
     // Examine each char in the string to skip alphanumeric char
+    // Character 是char 的包裝類
     for (int i = 0; i < s.length(); i++) {
-      if (Character.isLetterOrDigit(s.charAt(i))) {
+      if (Character.isLetterOrDigit(s.charAt(i))) { // 判斷 String 是否有char or int
+                                                    // java.lang.Character.isLetterOrDigit(char ch) 確定指定的字符是否為字母或數字。
         stringBuilder.append(s.charAt(i));
       }
     }

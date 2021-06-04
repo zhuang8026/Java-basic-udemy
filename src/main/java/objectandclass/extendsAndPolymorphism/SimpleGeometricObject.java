@@ -1,4 +1,4 @@
-package objectandclass;
+package objectandclass.extendsAndPolymorphism;
 
 public class SimpleGeometricObject {
 
@@ -63,5 +63,9 @@ public class SimpleGeometricObject {
   public String toString() {
     return "created on " + dateCreated + "\ncolor: " + color +
         " and filled: " + filled;
+  }
+
+  public static void getTestStatic() {
+    System.out.println("父類的 getTestStatic");
   }
 }

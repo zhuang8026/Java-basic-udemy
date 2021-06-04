@@ -52,10 +52,11 @@ public abstract class GeometricObject {
   /**
    * Abstract method findArea
    */
-  public abstract double getArea();
-
+  public abstract double getAreas();
+  public abstract int setAreas(int i);
   /**
    * Abstract method getPerimeter
    */
   public abstract double getPerimeter();
+
 }

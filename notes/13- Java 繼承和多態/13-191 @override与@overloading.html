@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   1. @override - 方法重寫
+      -> 條件
+        -> 必須使用 相同的簽名 和 相同的返回值類型(在子類中)
+      -> ex:
+        -> 父類： public class A {
+                    public void common (int i) { sout(i) }
+                }
+        -> 子類： public class B extends A {
+                    @override
+                    public void common (int i) { sout(i) } // 重點1: 方法名必須相同
+                                                           // 重點2: 傳入參數必須相同
+                 }
+
+   2. @overloading - 方法重載
+      -> 條件
+        -> 必須使用 相同的簽名 和 相同的返回值類型(在子類中)
+      -> ex:
+        -> 父類：  public class A {
+                    public void common (double i) { sout(i) }
+                  }
+        -> 子類：  public class B extends A {
+                    @overloading
+                    public void common (int i) { sout(i) }  // 重點1: 方法名必須相同
+                                                            // 重點2: 傳入參數可以不相同
+                  }
+        public class test {
+          psvm {
+            A a = new A();
+            a.common(10);   // 10    B的common()
+            a.common(10.1); // 10.1  A的common()
+          }
+        }
+   3.
+   4.
+   5.
+   6.
+   6.
+
+</body>
+</html>

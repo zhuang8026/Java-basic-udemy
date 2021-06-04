@@ -3,8 +3,13 @@ package objectandclass.interfaceandabstrackclass;
 public class MyCircle extends GeometricObject {
 
   @Override
-  public double getArea() {
+  public double getAreas() {
     return 0;
+  }
+
+  @Override
+  public int setAreas(int i ) {
+    return i;
   }
 
   @Override

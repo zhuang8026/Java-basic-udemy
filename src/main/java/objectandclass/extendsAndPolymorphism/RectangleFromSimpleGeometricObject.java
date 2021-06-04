@@ -1,4 +1,6 @@
-package objectandclass;
+package objectandclass.extendsAndPolymorphism;
+
+import objectandclass.extendsAndPolymorphism.SimpleGeometricObject;
 
 public class RectangleFromSimpleGeometricObject extends SimpleGeometricObject {
 
@@ -14,8 +16,7 @@ public class RectangleFromSimpleGeometricObject extends SimpleGeometricObject {
     this.height = height;
   }
 
-  public RectangleFromSimpleGeometricObject(
-      double width, double height, String color, boolean filled) {
+  public RectangleFromSimpleGeometricObject( double width, double height, String color, boolean filled) {
     this.width = width;
     this.height = height;
     setColor(color);

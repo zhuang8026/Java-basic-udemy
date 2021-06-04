@@ -7,8 +7,7 @@ public class CloneableDemo {
 
   public static void main(String[] args) {
     Date ins1 = new Date();
-    Date ins2 = (Date) ins1.clone();
-
+    Date ins2 = (Date) ins1.clone(); // ins1.clone() 拷貝出來之後是Object,所以需要強行轉換
     System.out.println(ins1 == ins2);
 
     int[] list1 = {1, 2};

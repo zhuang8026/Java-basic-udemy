@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   1. 子類要修改父類定義的方法的時候，會需要用到 @override
+   1-1. 為什麼要使用 @override ？
+      -> 因為在子類中，如果想要命名一模一樣的名字，並且返回值一樣但內容不一樣，就可以使用 @override
+   2. 父類：
+        public String toString(){ return "A" }
+      子類：
+        @override
+        public String toString(){ return "B" }
+   3.  重點：
+        —> 方法名一樣
+        -> 方法體一樣
+        -> 傳入參數一樣
+   4.  如果 父親中是 static 方法 怎麼辦？子類要如何使用？
+        -> 父類.靜態方法
+          -> ex: fatherClassName.fatherStaticMethod();
+   5.
+   6.
+   6.
+
+</body>
+</html>

@@ -2,7 +2,7 @@ package objectandclass.equalsdemo;
 
 import java.util.Objects;
 
-public class Student {
+public class Student extends Object {
 
   private String firstName;
   private String lastName;
@@ -27,7 +27,9 @@ public class Student {
     if (this == o) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+
+    // student 是Object的子類, this就會有object methods
+    if (o == null || this.getClass() != o.getClass()) {
       return false;
     }
     Student student = (Student) o;
@@ -35,7 +37,7 @@ public class Student {
         Objects.equals(lastName, student.lastName);
   }
 
-  protected final void m(){
+  protected final void m() {
 
   }
 

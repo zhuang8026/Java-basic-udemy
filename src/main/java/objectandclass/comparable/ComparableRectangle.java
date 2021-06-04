@@ -1,7 +1,6 @@
 package objectandclass.comparable;
 
-public class ComparableRectangle extends Rectangle
-    implements Comparable<ComparableRectangle> {
+public class ComparableRectangle extends Rectangle implements Comparable<ComparableRectangle> {
 
   /**
    * Construct a ComparableRectangle with specified properties
@@ -10,11 +9,13 @@ public class ComparableRectangle extends Rectangle
     super(width, height);
   }
 
-  @Override // Implement the compareTo method defined in Comparable 
+  // 實現Comparable接口之後，就可以對 compareTo進行重寫
+  @Override // Implement the compareTo method defined in Comparable
   public int compareTo(ComparableRectangle o) {
-    if (getArea() > o.getArea()) {
+
+    if (this.getAreas() > o.getAreas()) {
       return 1;
-    } else if (getArea() < o.getArea()) {
+    } else if (this.getAreas() < o.getAreas()) {
       return -1;
     } else {
       return 0;
@@ -24,6 +25,7 @@ public class ComparableRectangle extends Rectangle
   @Override // Implement the toString method in GeometricObject
   public String toString() {
     return "Width: " + getWidth() + " Height: " + getHeight() +
-        " Area: " + getArea();
+        " Area: " + this.getAreas();
   }
+
 }

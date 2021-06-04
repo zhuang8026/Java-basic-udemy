@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  1. 如果想要兩個對象可以相互比對，那類後面可以接 comparable 接口
+  2. ex: Integer and bigInteger
+        -> public class Integer extends Number implements Comparable<Integer> {
+              @override
+              public int compareTo(Integer i) { ... }
+            }
+  3.  ex: String and Date
+        -> public class String extends Number implements Comparable<String> {
+              @override
+              public int compareTo(String i) { ... }
+          }
+  4. 有很多類(Class) 都實現(implements)了Comparable接口，用來定義對象的自然順序
+      -> Integer、BitInteger
+      -> String 、Date
+  5.
+  6.
+  6.
+
+</body>
+</html>

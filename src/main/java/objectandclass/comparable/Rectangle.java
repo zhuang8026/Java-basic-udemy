@@ -35,9 +35,12 @@ public class Rectangle extends GeometricObject {
   }
 
   @Override /** Return area */
-  public double getArea() {
+  public double getAreas() {
     return width * height;
   }
+
+  @Override
+  public int setAreas(int i) { return 0; }
 
   @Override /** Return perimeter */
   public double getPerimeter() {

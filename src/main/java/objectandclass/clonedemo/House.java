@@ -6,12 +6,12 @@ public class House implements Cloneable, Comparable<House> {
 
   private int id;
   private double area;
-  private java.util.Date whenBuilt;
+  private Date whenBuilt; // 引用 Date
 
   public House(int id, double area) {
     this.id = id;
     this.area = area;
-    whenBuilt = new java.util.Date();
+    this.whenBuilt = new Date();
   }
 
   public int getId() {
@@ -22,7 +22,7 @@ public class House implements Cloneable, Comparable<House> {
     return area;
   }
 
-  public java.util.Date getWhenBuilt() {
+  public Date getWhenBuilt() {
     return whenBuilt;
   }
 
@@ -31,7 +31,7 @@ public class House implements Cloneable, Comparable<House> {
    the Object class, and strengthen its accessibility */
   public Object clone() {
     try {
-      House houseClone = (House) super.clone();
+      House houseClone = (House) super.clone(); // super 是指向Object
       houseClone.whenBuilt = (Date) whenBuilt.clone();
       return houseClone;
     } catch (CloneNotSupportedException ex) {

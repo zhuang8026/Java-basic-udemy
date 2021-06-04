@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  Demo : src/main/java/objectandclass/clonedemo/CloneableDemo.java
+
+  1. cloneable interface
+      -> 科隆 interface
+  2. public interface Cloneable{ ... }
+  3. cloneable 是深拷貝
+
+  4. 在java語言中，有幾種方式可以創建物件呢？
+      -》 使用new運算子創建一個物件
+      -》 使用clone方法複製一個物件
+
+  5. 在Java語言中， clone方法被物件呼叫，所以會複製物件。所謂的複製物件，首先要分配一個和源物件同樣大小的空間，在這個空間中創建一個新的物件。
+      -> object.clone()
+  6. Object 本身没有实现 Cloneable 接口，所以不能直接使用 clone 方法，必須 implements Cloneable
+      ex:
+        class RunoobTest implements Cloneable {
+            psvm {
+              RunoobTest r1 = new RunoobTest();
+              RunoobTest r2 = (RunoobTest) r1.clone();
+              // 重點： 這是深拷貝（deep clone），所以會配置全新的記憶體， 內容一樣，但記憶體位置卻不同。
+                       在使用clone的時候，如果裡面有引用類型，那會變成淺拷貝，那麼就要 @Override clone 方法，並且 Class.xxx = (Date) new Date().clone();
+            }
+        }
+  6.
+
+</body>
+</html>

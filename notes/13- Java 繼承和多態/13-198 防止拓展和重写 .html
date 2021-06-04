@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   URL:
+
+                    Class      subClass    same package    diff package
+   1. public    |    OK    |    OK     |        OK      |       OK     |
+   2. protected |    OK    |    OK     |        OK      |              |
+   3. default   |    OK    |           |        OK      |              |
+   4. private   |    OK    |           |                |              |
+
+   1. 使用 final 關鍵字 可以防止 拓展和重寫
+         -> final 可以修飾 變量 也可以修飾 方法
+            -> ex:
+               final static double PI = 3.1415926
+               final class Math { ... }
+   2. 只要使用了 final 關鍵字
+         -> 不可以： 拓展、重寫(@override)、被繼承(extends)
+         -> 如果 父類 中有一個 方法 被final關鍵字修飾，那麼，他的子類是 無法 對這個 方法 重寫（@override）
+   3.
+   4.
+   5.
+   6.
+   6.
+
+
+</body>
+</html>

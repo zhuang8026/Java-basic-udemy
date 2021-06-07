@@ -22,7 +22,7 @@ public class CircleWithException {
   /**
    * Construct a circle with a specified radius
    */
-  public CircleWithException(double newRadius) {
+  public CircleWithException(double newRadius) throws IllegalArgumentException {
     setRadius(newRadius);
     numberOfObjects++;
   }

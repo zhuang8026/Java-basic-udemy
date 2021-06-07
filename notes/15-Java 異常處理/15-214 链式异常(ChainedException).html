@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  Demo: src/main/java/exceptionhandling/ChainedExceptionDemo.java
+
+  1. 什麼是 鏈式異常 (ChainedExceptionDemo) ？
+      ->  我們catch語塊中捕獲異常，並重新的拋出，有時會和原始異常 結合 並添加了一些訊息之後，
+          在一起拋出新的異常，這個就叫做 鏈式異常。
+  2.  ex:
+          public class XXXXXXXXX {
+              public static void main(String[] args) {
+                  try {
+                      AAA(); // 捕獲到 BBB + AAA 異常
+                  } catch (Exception ex) {
+                      ex.printStackTrace(); // 顯示異常
+                  }
+              }
+
+              public static void AAA() throws Exception {
+                  try {
+                      BBB(); // BBB拋出異常給AAA捕獲
+                  } catch (Exception ex) {
+                      throw new Exception("New info from AAA", ex); // BBB異常 和 AAA異常結合
+                  }
+              }
+
+              public static void BBB() throws Exception {
+                  throw new Exception("New info from BBB");
+              }
+          }
+  3.
+  4.
+  5.
+  6.
+  6.
+
+</body>
+</html>

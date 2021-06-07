@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  1. Exception 通常需要更多的時間和資源。
+     一般多用在 try catch 和 if else 居多
+
+  2. try catch
+      -> 一般用在 不可預料 的錯誤狀況下
+      -> 盡量不要使用用在 簡單的、可預料 的錯誤情況
+      -> ex:
+          try {
+              sout(i.toString());
+          } catch (NullPointerException ex){
+              sout('value is null');
+          }
+
+          // 簡單 Exception 判斷用 if else
+          public void setNumber (int i) throws NullPointerException {
+              if(i > 0) {
+                  this.num = i;
+              } else {
+                  throw new NullPointerException(" value is null ")
+              }
+          }
+          或
+          if(i ！= null ) {
+              sout(i.toString());
+          } else {
+              sout("value is null");
+          }
+
+  3. 重點： 不要異常處理(Exception) 用在簡單的邏輯測試，
+  4.
+  5.
+  6.
+  6.
+
+</body>
+</html>

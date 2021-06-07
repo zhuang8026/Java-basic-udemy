@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   1. Throwable 是所有異常類的祖先類
+      -> Java中所有的異常類都 直接 或 間接 繼承至 Throwable (父類)
+
+                |-> Exception
+   2. Throwable -
+                |-> Error
+
+   3. Exception 類
+      程序和外部環境引起的錯誤，而錯誤訊息能被Java的錯誤類捕獲和處理
+      -> ClassNotFoundException
+        -> 嘗試使用一個不存在的類時，就會發現 ClassNotFoundException
+      -> IOExpection
+        -> 無限的輸入 或 讀取文件超過了文件的尾巴 或 嘗試打開一個不存在的文件
+      -> RuntimeException - 捕獲程序設計的錯誤
+        -> ArithmeticException 數學運算異常
+        -> NullPointerException 變量 未初始化(null)
+        -> IndexOutOfBoundsException 數組下標超出引用範圍
+        -> IllegalArgumentException 給方法傳遞的參數是非法的 或 錯誤參數
+
+   4. Error 類 - 系統錯誤
+      系統錯誤 是由java虛擬機拋出的，描述的是內部系統的錯誤，算是非常嚴重
+      -> (子類) LinkgeError
+      -> (子類) VirtualMachineError
+      ->
+
+   5.  RuntimeException 和 Error 和他們兩個的子類都被成為 unchecked exceptions，其他的異常都是 checked exceptions。
+       -> unchecked exceptions (免檢異常)
+       -> checked exceptions (必檢異常)
+        -> 需通過try catch 來捕獲異常 或 在方法頭進行聲明
+   6.
+   6.
+
+</body>
+</html>

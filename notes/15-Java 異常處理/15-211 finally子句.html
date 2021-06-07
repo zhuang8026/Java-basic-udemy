@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  1. Declare 聲明異常
+      -> throws
+        -> ex :  public class void XXXX() throws Exception1, Exception2, ... { ... }
+
+  2. Throw 拋出異常
+      -> throw
+        -> ex :  throw new XXXX();
+                 XXXX ex = new XXXX();
+                 throw ex;
+
+  3. Catch 捕獲異常
+      -> try catch { ... }
+
+  4. finally
+      -> try catch finally
+      -> 不論在執行的過程中，不管發生什麼異常 或 是否有被捕獲，都能直接某些特定的代碼，這是就可以用 finally
+      -> demo: src/main/java/exception/finallydemo/FinallyDemo.java
+
+  4. 例子：
+      public class XXXX {
+          public XXXX(double num) {
+            setNumber(num);
+          }
+          // 注意 ： IllegalArgumentException 是免檢異常，所以可以不寫 "throws IllegalArgumentException"
+          public void setNumber (int i) throws IllegalArgumentException {
+              if(i > 0) {
+                this.num = i;
+              } else {
+                throw new IllegalArgumentException(" 數值必須大於0 ")
+              }
+          }
+      }
+
+      psvm {
+          try {
+              XXXX c1 = new XXXX(5);
+              XXXX c2 = new XXXX(-5);
+              XXXX c3 = new XXXX(0);
+          } catch (IllegalArgumentException ex) {
+              System.out.println(ex); // ex 會自動轉 toString();
+              System.out.println(ex.toString());
+          } finally {
+          sout ("在finally中，程序都一定會執行，就算抱錯也一樣執行")
+
+          }
+      }
+
+  5.
+  6.
+  6.
+
+</body>
+</html>

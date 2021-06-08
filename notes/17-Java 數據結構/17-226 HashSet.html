@@ -6,8 +6,20 @@
 </head>
 <body>
 
-   1.
-   2.
+   demo: src/main/java/datastructure/set/HashSetDemo.java
+
+   1.重點：
+      -> Set 中的數據是無法重複的
+      -> Set 是一個接口, Map 也是一個接口
+        -> HashSet 是Set的實現類
+        -> HashSet 是無序的
+   2. ex:
+      Set<String>  hashset = new HashSet<>();
+      hashset.add("one");
+      hashset.add("two");
+      hashset.add("three");
+      hashset.add("one"); // 會自動刪除重複的值
+      System.out.println(hashset); // [one, two, there]
    3.
    4.
    5.

@@ -11,8 +11,7 @@ public class TreeSetDemo {
         set.add("Paris");
         set.add("Beijing");
 
-        Set s1=((TreeSet<String>) set).descendingSet();
-
+        Set s1=((TreeSet<String>) set).descendingSet(); // descendingSet 降冪排序
 
         System.out.println(s1);
 

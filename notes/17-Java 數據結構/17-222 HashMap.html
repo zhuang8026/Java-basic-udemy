@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   Demo : src/main/java/datastructure/map/HashMapDemo.java
+
+   1. HashMap
+    -> 是Java中重要的數據結構，專門用來存放 鍵值對類型(key/Value) 數據
+      -> ex: 小米(key) -> 20000(value)
+      -> ex: Map< key, vlaue >
+             Map<String, Integer> XXX = new HashMap<String, Integer>();
+             XXX.push("小米", 20000);
+             sout(XXX.get("小米",)); // 20000
+   2. 什麼是Entry？
+        我們存在HashMap中的每一個元素實際上都是一個封裝類型，這個封裝類型的結構就是一個 Entry。
+        如果想 遍歷 HashMap,那就是在 遍歷 Entry。
+        ex:
+            Map<String, Integer> XXXXX = new HashMap<>();
+
+            // 方法一 - Entry
+            for (Map.Entry<String, Integer> entry : XXXXX.entrySet()) {
+                System.out.println(entry.getKey() + ":" + entry.getValue());
+            }
+            // 方法二 - lambda - after JDK 1.8
+            XXXXX.forEach((k, v) -> {
+                System.out.println(k + ":" + v);
+            });
+            // 方法三 - Iterator
+            Set set = XXXXX.entrySet();
+            Iterator iterator = set.iterator();
+            while (iterator.hasNext()) {
+                Map.Entry entry = (Map.Entry) iterator.next();
+                sout(entry.getKey() + ":" + entry.getValue());
+            }
+   3.
+   4.
+   5.
+   6.
+   6.
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 package objectandclass.interfacedemo;
 
-public abstract class Animal {
+public abstract class Animal extends Object{
 
   public abstract String sound();
 }

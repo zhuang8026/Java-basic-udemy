@@ -8,7 +8,7 @@
 
    1. HashMap 特點:
       -> 數據的快速存取 （put, (getValue, getKey)）
-      -> 數據的快速查找 (查找數據複雜度是O^n)
+      -> 數據的快速查找 (查找數據複雜度是O(1))
       -> 空間彈可性伸縮
    2. HashMap 的數據結構:
       -> 數組
@@ -20,7 +20,8 @@
             1. 單向鏈表
             2. 紅黑樹
    4. 紅黑樹在HashMap中的應用
-      -> 當鏈表長度大於8的時候會自動轉成 紅黑樹 的數據結構
+      -> 當鏈表長度 大於8 的時候會自動轉成 紅黑樹 的數據結構
+      -> 長度 小於8 存儲方式為 一般陣列
       -> Demo: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
          -> RedBlack.html
    5.

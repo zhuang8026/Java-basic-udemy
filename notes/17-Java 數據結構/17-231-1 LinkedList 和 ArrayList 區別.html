@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   demo: src/main/java/datastructure/map/LinkedListDemo.java
+         src/main/java/datastructure/performancetest/PerformanceTest.java - 速度測試
+
+                    | -> ArrayList
+   List (interface) -
+                    | -> LinkedList
+
+      區別在哪?
+        -> 數據結構不一樣，一個是鏈接一個是數組
+
+        -> ArrayList 有固定的體積(參數都在一個大的區塊中), LinkedList 沒有固定體(每一個參數都是一小塊)
+
+        -> ArrayList  的中间插入或删除 一个元素 意味着这个列表中的元素都会被移动
+           LinkedList 的中间插入或删除 一个元素 的开销是固定的
+
+        -> LinkedList 不支持高效的随机元素访问，反知。
+
+        -> ArrayList  的空间浪费 主要体现在在list列表的结尾预留一定的容量空间 ( [1, 2, 3] )
+           LinkedList 的空间花费则体现在它的 每一个元素 都需要消耗一部分的空间 ( [1], [2], [3] )
+
+        ->
+        ->
+        LinkedList 為什麼插入比較快？
+          -> 因為 他每一個都是獨立區塊, 但有參數要加入時, 他需要按照順序判斷是否有區塊存在,如果沒有才會插入。
+        ArrayList 為什麼插入比較慢 ?
+          -> 因為 array本身就有index下標，可以直接選擇index下標插入。但是！array做完插入之後, 會有一系列的動作,
+             reset自身的空間、會將舊array複製到新array並將新的參數插入(當舊array空間不夠用時)。
+
+   1.  LinkedList 是鏈接結構
+          -> 查慢， 增刪快
+             -> 查找慢 是因為 他需要按照順序一個一個去比較(1 ~ end) 也就是 O(n)
+             -> 增刪快 是因為 他只需要將要插入元素的前一個指向 我們要插入的元素即可 也就是 O(1)
+                 -> 1 > 2 > 3 > 4 add(index: 1, int: 888)
+                    0   1   2   3 => index
+                    -> 1           2 > 3 > 4 ( 1 和 2 之間的鏈接會斷開 )
+                        |-> 888 ->｜
+          -> 重點: 雙向 鏈表結構 (DoubleLinkedList)
+             -> 也就是說 不要從頭在尋找一次,可直接在指定位置回頭尋找參數
+                   ->   ->   ->
+                 1    2    3    4
+                   <-   <-   <-
+        ArrayList 是數組結構
+          -> 查快， 增刪慢
+   2.
+   3.
+   4.
+   5.
+   6.
+   6.
+
+</body>
+</html>

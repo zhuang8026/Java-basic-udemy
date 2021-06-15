@@ -16,12 +16,12 @@ public class PriorityQueueDemo {
     queue1.offer(5);
     queue1.offer(6);
 
-    System.out.println(queue1);
+    System.out.println(queue1); // [1, 3, 2, 4, 5, 6]
 
     while (!queue1.isEmpty()) {
-      System.out.print(queue1.poll() + " ");
+      System.out.print(queue1.poll() + " "); // 1 2 3 4 5 6
     }
-
+    System.out.println();
     System.out.println("===============");
 
     PriorityQueue<Integer> queue2 = new PriorityQueue<>(6, Collections.reverseOrder());
@@ -34,7 +34,7 @@ public class PriorityQueueDemo {
     queue2.offer(6);
 
     while (!queue2.isEmpty()) {
-      System.out.print(queue2.poll() + " ");
+      System.out.print(queue2.poll() + " "); // 6 5 4 3 2 1
     }
 
 

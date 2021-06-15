@@ -1,5 +1,5 @@
 package objectandclass.interfacedemo;
 
-public abstract class Fruit implements Edible{
+public abstract class Fruit extends Object implements Edible {
 
 }

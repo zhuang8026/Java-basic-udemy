@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    /**
+    * 都是 interface,只有 stack 是實現類
+    * 都需要使用 泛型 <XX, XX>
+    * Map 不屬於 Collection interface
+    *
+    */
+
+   0. Map   存儲一組 數據結構 (key, value) : {} : {A=100, B=200}
+   1. Set   存儲一組不重複的元素 : []
+   2. List  存儲一個有序的元素   : []
+   3. Stack 先進 後 出 的方式存儲數據 : []
+   4. Queue 先進 先 出 的方式存儲數據 : []
+       -> Priority Queue 按照 優先級 循序處理對象
+
+   5. Collection
+        -> Set (元素唯一)
+          -> TreeSet 自動排序
+          -> HashSet 無排序
+              -> LinkedHashSet 按照添加的順序排列
+          ->
+        -> List (元素可重複)
+          -> Stack 堆疊 - 先進後出
+          -> ArrayList(子類)  - 數組 [1, 2, 3]
+          -> LinkedList(子類) - 鏈接 [1], [2], [3]
+          ->
+        -> Queue (元素可重複)
+          -> Queue 隊列 - 先進先出
+          -> LinkedList(實現類)
+          -> PriorityQueue - 指定規則排序(優先順序)
+          ->
+          ->
+   6. Iterable
+        Collection extends Iterable
+          -> hasNext() boolean - 是否還有下一個元素
+          -> next() Element - 獲取下一個元素
+          -> remove() - 刪除我們使用next()獲得的上一個元素
+   7.
+
+</body>
+</html>

@@ -13,8 +13,10 @@ public class IteratorDemo {
     collection.add("Taibei");
     collection.add("New York");
 
-    Iterator<String> iterator = collection.iterator();
+    Iterator<String> iterator = collection.iterator(); // iterator() 轉成iterator 對象
     while (iterator.hasNext()) {
+//      String str = (String) iterator.next();
+//      System.out.println(str.toUpperCase());
       System.out.println(iterator.next().toUpperCase());
     }
   }

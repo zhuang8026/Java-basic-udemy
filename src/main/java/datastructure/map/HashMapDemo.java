@@ -13,9 +13,10 @@ public class HashMapDemo {
 		//小明 -> 20000  key/value
 		Map<String, Integer> incomeMap = new HashMap<>();
 		incomeMap.put("小明", 20000);
-		incomeMap.put("小王", 30000);
-		incomeMap.put("小王", 40000);
+		incomeMap.put("小王", 30000); // 新增
+		incomeMap.put("小王", 40000); // 修改 -> key 值對應即可修改
 
+		System.out.println(incomeMap);
 		System.out.println(incomeMap.get("小明"));
 		System.out.println(incomeMap.get("小王"));
 
@@ -35,6 +36,9 @@ public class HashMapDemo {
 		incomeMap.forEach((k, v) -> {
 			System.out.println(k + ":" + v);
 		});
+//		incomeMap.entrySet().stream().filter(D -> {
+//			return !D.getKey().equals("小明");
+//		});
 
 		System.out.println("+++++++++++++++ Iterator +++++++++++++++");
 

@@ -29,8 +29,7 @@ public class Heap<E extends Comparable<E>> {
     while (currentIndex > 0) {
       int parentIndex = (currentIndex - 1) / 2;
       // Swap if the current object is greater than its parent
-      if (list.get(currentIndex).compareTo(
-          list.get(parentIndex)) > 0) {
+      if (list.get(currentIndex).compareTo(list.get(parentIndex)) > 0) {
         E temp = list.get(currentIndex);
         list.set(currentIndex, list.get(parentIndex));
         list.set(parentIndex, temp);

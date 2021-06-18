@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+    demo : src/main/java/sort/InsertSort.java
+    1. 插入排序
+    工作原理：
+      步驟就是把 後面的牌 抽到 前面適當 的位置插入
+      從第一個開始比對，依此向後，知道 back value 大於 current value 停下
+
+    複雜度: O(n^2)
+
+    圖解：
+        -> [9, 1, 4, 2, 7]                 // 9,1 比對
+            -> [1, 9, 4, 2, 7]             // 9,4 比對
+                -> [1, 4, 9, 2, 7]         // 4,9,2 比對
+                    -> [1, 2, 4, 9, 7]     // 9,7 比對
+                        -> [1, 2, 4, 7, 9] // end
+
+</body>
+</html>

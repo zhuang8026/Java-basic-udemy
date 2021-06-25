@@ -20,7 +20,6 @@ public class LockSolderAndBuyer {
 		executor.execute(new Buyer());    // 添加並執行
 		executor.shutdown();              // 停止全部任務
 	}
-
 	// 生產者線程
 	public static class Producer implements Runnable {
 

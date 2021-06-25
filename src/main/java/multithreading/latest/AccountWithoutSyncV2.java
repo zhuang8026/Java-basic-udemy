@@ -3,7 +3,7 @@ package multithreading.latest;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class AccountWithoutSync {
+public class AccountWithoutSyncV2 {
 
 	private static Account account = new Account();
 
@@ -31,11 +31,11 @@ public class AccountWithoutSync {
 	private static class AddAPennyTask implements Runnable {
 
 		public void run() {
-			// synchronized 為了避免產生競爭狀態，應該要將線程同步，這個特定的部分，成為 臨界區
-//			synchronized (account) {
-//				account.deposit(1);
-//			}
-			account.deposit(1);
+			// synchronized 同步塊
+			//  synchronized ( 將上鎖的對象 )
+			synchronized (account) {
+				account.deposit(1);
+			}
 		}
 	}
 
@@ -49,7 +49,7 @@ public class AccountWithoutSync {
 		}
 
 		// 添加存款
-		public synchronized void deposit(int amount) {
+		public void deposit(int amount) {
 			int newBalance = balance + amount;
 
 			// This delay is deliberately added to magnify the

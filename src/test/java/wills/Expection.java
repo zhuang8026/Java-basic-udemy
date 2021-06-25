@@ -7,11 +7,12 @@ import java.util.Scanner;
 public class Expection {
 
   public static void main(String[] args) {
-//    System.out.println("請輸入：");
-//    Scanner input = new Scanner(System.in);
+    System.out.println("請輸入：");
+    Scanner input = new Scanner(System.in);
     try {
       int id = 101;
-      String name = "Tom";
+//      String name = "Tom";
+      int name = input.nextInt();
       System.out.println("id = " + id + "\n" + "name" + name);
     } catch(InputMismatchException ex) {
       System.out.println("输入数据不合规范");

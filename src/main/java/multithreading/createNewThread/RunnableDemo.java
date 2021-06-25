@@ -3,10 +3,10 @@ package multithreading.createNewThread;
 public class RunnableDemo {
 
     public static void main(String[] args) {
-        Runnable show100A = new Show100A();
+        Runnable show100A = new Show100A(); // 將任務類 傳給 new Thread();
 
-        Thread threadA = new Thread(show100A);
-        threadA.start();
+        Thread threadA = new Thread(show100A); // 線程類
+        threadA.start(); // 啟動線程
     }
 }
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   demo : src/main/java/multithreading/latest/LockNewCondition.java
+          src/main/java/multithreading/latest/LockNewConditionV2.java (自己寫的，過程更明確)
+
+   1. Locks interface 利用鎖 同步
+       -> lock() 獲取
+       -> unlock() 釋放
+       -> newCondition() 新增條件，實現線程之間的同步
+   2. ReentrantLock implements Lock { ... }
+   3. ex :
+      1-創建通道：ExecutorService executorV1 = Executors.newFixedThreadPool(2);
+          -> 重點：線程會通過通道同時出發
+      2-創建線程：public static class XXXX implements Runnable { ... }
+      3-創建類：private static class AccountV1 { ... }
+          -> 創建 Lock：private static Lock lock = new ReentrantLock();
+              -> lock.lock();
+              -> lock.unlock();
+          -> 創建 Condition：private static Condition XXXX = lock.newCondition();
+              -> newDepositV1.await(); // 線程進入等待狀態,一直到 signalAll() 才會繼續往下執行
+              -> newDepositV1.signalAll(); // 喚起所有正在等待的線程
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

@@ -56,8 +56,7 @@ public class ConsumerProducer {
   private static class Buffer {
 
     private static final int CAPACITY = 1; // buffer size
-    private java.util.LinkedList<Integer> queue =
-        new java.util.LinkedList<Integer>();
+    private java.util.LinkedList<Integer> queue = new java.util.LinkedList<Integer>();
 
     // Create a new lock
     private static Lock lock = new ReentrantLock();
@@ -93,6 +92,7 @@ public class ConsumerProducer {
         }
 
         value = queue.remove();
+
         notFull.signal(); // Signal notFull condition
       } catch (InterruptedException ex) {
         ex.printStackTrace();

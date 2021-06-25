@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   demo : src/main/java/multithreading/latest/AccountWithoutSync.java
+
+   1. 如果一個共享資源被多個線程同時訪問，可能會遭受到破壞。
+      ex : 存錢
+           2個人同時對一個帳戶進行存錢，那邊看到的可能會數目會不對。所以需要使用 線程同步 來保証 先來後到 存錢
+
+   2. synchronized 為了避免產生競爭狀態，應該要將線程同步，這個特定的部分，成為 臨界區
+        -> 只要使用 synchronized，意味著只要使用 xxxx 都必須要排隊執行
+        使用方法(2種)：
+         -> 同步方法 / public synchronized void xxxx(int amount) { ... }
+         -> 同步塊 /   synchronized ( 對象 ) { ... }
+
+   3.
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

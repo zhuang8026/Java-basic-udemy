@@ -1,5 +1,7 @@
 package wills;
 
+import java.util.Scanner;
+
 public class AcerTest01 {
 
 	public static void getStringAllSumFun(int n) {
@@ -16,7 +18,9 @@ public class AcerTest01 {
 	}
 
 	public static void main(String[] args) {
-		int N = 4;
+		System.out.println("請輸入自訂參數：");
+		Scanner input = new Scanner(System.in);
+		int N = input.nextInt();
 		for (int i = 1; i <= N; i++) {
 			getStringAllSumFun(i);
 		}

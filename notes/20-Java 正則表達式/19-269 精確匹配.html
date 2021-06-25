@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    demo : src/main/java/regularexpression/BasicDemo.java (精確匹配)
+   1. Pattern 類
+        -> compile(rex, xxx); // rejax 編譯設定
+            -> rex => regex 要查找的String
+            -> xxx => Pattern.CASE_INSENSITIVE (忽略大小寫)
+   2. Matcher 類
+        -> rejax查找匹配之後的結果
+        -> Pattern.compile("xxxx").matcher("xxx xxxxx xxxx"); // 返回的是 Matcher 類
+        -> find() 是返回boolean
+
+   3. ex:
+        Pattern pat = Pattern.compile("\\d{12}" or "\[^0-9]{12}", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pat.matcher("13068146985");
+
+        boolean matchFound = matcher.find(); // find reurn boolean
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

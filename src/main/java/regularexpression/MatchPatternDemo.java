@@ -7,7 +7,8 @@ public class MatchPatternDemo {
 
   public static void main(String[] args) {
     //匹配数字
-    Pattern pattern = Pattern.compile("\\d{12}", Pattern.CASE_INSENSITIVE);
+//    Pattern pattern = Pattern.compile("\\d{12}", Pattern.CASE_INSENSITIVE);
+    Pattern pattern = Pattern.compile("[^0-9]{12}", Pattern.CASE_INSENSITIVE);
     Matcher matcher = pattern.matcher("13068146985");
 
     boolean matchFound = matcher.find();

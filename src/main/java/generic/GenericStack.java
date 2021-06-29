@@ -2,7 +2,7 @@ package generic;
 
 import java.util.ArrayList;
 
-public class GenericStack<E> {
+public class  GenericStack<E> {
 
   private ArrayList<E> list = new ArrayList();
 
@@ -19,9 +19,9 @@ public class GenericStack<E> {
   }
 
   public E pop() {
-    E o = list.get(getSize() - 1);
+    E obj = list.get(getSize() - 1);
     list.remove(getSize() - 1);
-    return o;
+    return obj;
   }
 
   public boolean isEmpty() {

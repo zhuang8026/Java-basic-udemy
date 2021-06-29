@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  demo : src/main/java/generic/WildCardNeedDemo.java
+
+   1. 通配泛型
+      -> Wildcards
+
+   2. 如何使用？
+      -> '?'  非受限通配 unbounded wildcard
+          -> '?' 等價於 '? extends Object'
+          -> ex: public static int max(泛型類<? extends Object> data) { ... }
+          -> dec: 可以給泛型類中 傳入任何類型元素，因為所有的類(基本 or 包裝)都是Object的子類
+
+
+      -> '? extends T'  受限通配   bounded wildcard
+          -> ex: public static int max(泛型類<? extends Number> data) { ... }
+          -> dec: 只要是 Number 的子類，都能合法調用
+          ->  List<? extends Number> foo3 = new ArrayList<Number>();  // Number "extends" Number (in this context)
+              List<? extends Number> foo3 = new ArrayList<Integer>(); // Integer extends Number
+              List<? extends Number> foo3 = new ArrayList<Double>();  // Double extends Number
+
+
+      -> '? super T'  下限通配   lower bound wildcard
+          -> demo: src/main/java/generic/SuperWildCardDemo.java
+          -> dec: <? super T> 指定了 stack1 中的元素 是 stack2 的子類，規定 子類參數 要傳入 父類，必須是什麼類型的type
+          ->  List<? super Integer> foo3 = new ArrayList<Integer>();  // Integer is a "superclass" of Integer (in this context)
+              List<? super Integer> foo3 = new ArrayList<Number>();   // Number is a superclass of Integer
+              List<? super Integer> foo3 = new ArrayList<Object>();   // Object is a superclass of Integer
+          ->
+
+   3. T，E，K，V 是什麼意思？
+        ？：表示不確定的 java 型別
+        T ：(type) 表示具體的一個java型別
+        K V (key value) ：分別代表java鍵值中的Key Value
+        E (element) ：代表Element
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

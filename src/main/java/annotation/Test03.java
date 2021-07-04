@@ -10,18 +10,18 @@ import java.lang.annotation.Target;
 @MyAnnotation
 public class Test03 {
 
+	@MyAnnotation
+	public void testAnnotation() {
 
-  public void testAnnotation(){
-
-  }
+	}
 
 }
 
-@Target(value = {ElementType.METHOD,ElementType.TYPE})
-@Retention(RetentionPolicy.RUNTIME)
+@Target(value = {ElementType.METHOD, ElementType.TYPE})
+@Retention(value = RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@interface MyAnnotation{
+@interface MyAnnotation {
 
 }
 

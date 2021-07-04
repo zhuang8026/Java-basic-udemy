@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+    demo： src/main/java/reflection/Test02.java
+   1. 如何獲得Class類？
+          第一種：已知具體的類，通過class屬性獲取(此方法最安全，性能最高)
+            >  Class c1 = Person.class; // Person 是父類
+
+          第二種：已經某個類的實例，調用該實例的 getClass() 來取得 Class 對象
+            >  Person str = new Student(); // 先實例化
+            >  Class c1 = str.getClass(); // getClass 取得
+
+          第三種：已經類的全名，並知道路徑，通過Class類的靜態方法forName來取得
+            >  Class c1 = Class.forName("reflection.Test02"); // 已知路徑 取得
+
+          第四種：java內置基本數據類型可以直接用 類名.Type
+            > Class c1 = Integer.TYPE; // 重點：限定基本的數據類型
+
+          第五種：取得 子類的父類類型 getSuperclass()
+            > Class c1 = str.getSuperclass(); // class package.Persion
+   2.
+   3.
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

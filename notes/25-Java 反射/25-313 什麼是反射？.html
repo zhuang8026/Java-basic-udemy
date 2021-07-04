@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    demo : src/main/java/reflection/Test01.java
+
+    ** 反射的類 就是 Class 類！！！！！！！ 記住了！！！！ **
+
+   1. 什麼是反射？
+      -> Reflection 反射
+      -> Reflection 被java視為動態語言的關鍵
+      -> 執行 reflection api 可取得任何類的內部訊息，並且能直接操作任意對象的內部屬性 和 方法。
+          -> 通過reflection api 來獲取 String 包裝類信息
+            -> ex : Class c1 = Class.forName("Java.lang.String");
+            -> ex : Class c1 = Class.forName("reflection.User");
+      -> 重點：
+            -> 正常： String str = new String();
+            -> 反射： Person person = new Student(); // 實例化對象
+                      Class c1 = person.getClass(); // 使用 reflection getClass method 來取得 完整類的訊息
+            -> 反射要求：但我們要獲得某一個 類 時候，那個 類 必須要在某一個 包 中！所以必須放在 某一個包 下。
+            ->
+   2. Java 算是"准動態語言"，因為java有一定的動態性，我們可以利用反射機制來獲得類似動態語言的特性。
+      反射的動態性讓編程變得更加靈活。
+   3. 優點：
+        可以實現動態創建對象和編譯。體現出很大的靈活性
+      缺點：
+        對性能有影響。反射是一種解釋性的操作，就是告訴jvm我們想要做什麼，但這種方式比我們直接 實例化 要慢的很多
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

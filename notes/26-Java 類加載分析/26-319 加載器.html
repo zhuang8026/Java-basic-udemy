@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   demo： src/main/java/classload/Test06.java
+
+   1. 類加載器的作用
+       > 將 class 文件字節碼內容加載到內容中，並將這些 static data 轉換成 方法區 運行時數據結構，然後
+         在 堆 中生成一個代表這個類的 java.lang.Class 對象，作為方法區中類數據的訪問入口。
+       > 流程：XXX.java 源文件 -> JAVA 編譯器 -> XXX.class 文件 -> 類加載器 -> 文節碼校驗器 -> 解釋器 -> 操作平台
+       >
+       >
+   2. 類加載器 JVM 規範定義了 3種 加載器：
+      > Bootstarp Classloader 引導類加載器 / C++ 編譯 / 父
+        -> 負責 rt.jar 包
+
+      > Extension Classloader 擴展類加載器 / extend Bootstarp / 子
+        -> 負責 jre/lib/ext 目錄下的jar包
+
+      > System Classloader 系統類加載器 / extend Extension / 子
+        -> 一般自定義的 class 類都是 系統加載器 轉譯而成
+        -> java 定義的類（ex: Object、String...）都是 引導類加載器 轉譯而成
+
+      > 自定義類加載器 / extend System / 子
+
+   3. 類加載的 雙親委派模型
+        > 假如 有一個 A.class
+          > 系統加載器 不會主動去加載 A.class, System 會去問 父類 Extension 是否已經加載 A.class，
+            如果 Extension 沒有加載 A.class，那麼，就便去詢問 Bootstarp 父類，如果 3 個加載器都沒有加載過 A.class，
+            這時候就會看 A.class 是位於那一個目錄下，從父層開始向下查找。
+        > 檢查： 是置頂向上查找
+        > 加載： 是自頂向下加載
+
+        為什麼 要有 雙親委派模型 ?
+        因為： 如果自定義了和java 內部定義的類(ex: Obejct or String ...)， 那麼，Java的 system 會優先執行 編譯者 自定義的類，不會使用 java 內部類。
+              所以當文件執行的時候，會先檢查所有的類(包括Java內部)，然後在依次從 Bootstarp -> Extension -> System -> 自定義類 執行
+   4.
+   5.
+   6.
+   7.
+
+</body>
+</html>

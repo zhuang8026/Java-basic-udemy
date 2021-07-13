@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    demo: src/main/java/classload/Test05.java
+
+   1. 棧
+      -> Main()
+      -> m = 100
+   2. 堆
+      -> java.lang.Test05
+      -> java.lang.A
+   3. 方法區(特殊的堆)
+      -> Test05 (class)
+        靜態變量
+        靜態方法
+        常量池
+        代碼
+      -> A (class)
+        靜態變量
+        靜態方法
+        常量池
+        代碼
+      ->
+      ->
+      ->
+
+   4. 類加載過程
+      加載： 將class文件自節碼內容加載到內存中，並將這些static data 轉換成 方法區 的運行時的數據結構，然後生成一個代表這類的 java.lang.Class 對象。
+      鏈接： 將 java 類的二進制代碼合併到 JVM 的運行狀態中的過程。
+          > 驗證
+          > 準備： 將static變量正式分配到內存中並設置變量默認初始化。
+          > 解析：符號引用(常量名) 替換 直接引用（地址）。
+      初始化： 執行類構造器 方法的過程。
+          > 合併：編譯器會自動收集所有類變量 和 靜態代碼(static) 將其合併。
+   5.
+   6.
+   7.
+
+</body>
+</html>

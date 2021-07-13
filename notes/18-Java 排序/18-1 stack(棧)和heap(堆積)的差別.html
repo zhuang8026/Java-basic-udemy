@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  1. Java把內存劃分成兩種：一種是heap 堆內存，一種是stack 棧內存。
+    > heap 堆
+        > 主要用於存儲實例化的對象，數組
+        > 堆是存儲的單位，它解決的是數據儲存的問題
+        > 堆是一個排序方法
+        > 堆 内存是所有线程 共有的。
+        > note: notes/18-Java 排序/18-244 堆積排序.html
+    > stack 棧
+        > stack 是java自己本身的類,基本數據類型
+        > stack 擁有陷入後出的概念
+        > 栈 内存是線程 私有的。
+
+    > 共享性不同
+        > 栈内存是线程私有的。
+        > 堆内存是所有线程共有的。
+
+    > 异常错误不同
+        > 如果栈内存或者堆内存不足都会抛出异常。
+        > 栈空间不足：java.lang.StackOverFlowError。
+        > 堆空间不足：java.lang.OutOfMemoryError。
+
+    > 空间大小
+        > 栈 的空间大小远远小于 堆的空间。
+
+    > des: https://iamjohnnyzhuang.github.io/java/2016/07/12/Java%E5%A0%86%E5%92%8C%E6%A0%88%E7%9C%8B%E8%BF%99%E7%AF%87%E5%B0%B1%E5%A4%9F.html
+
+</body>
+</html>

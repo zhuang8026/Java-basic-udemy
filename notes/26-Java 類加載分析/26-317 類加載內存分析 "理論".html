@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+    java 內存
+
+   1. heap 堆 -> 完滿二元樹 heapSort
+        > demo: src/main/java/sort/Heap.java
+        > 存放 實例化對象 和 數組
+        > 堆内存是所有线程 共有的。
+        >
+        >
+   2. stack 棧(先進後出) -> java 基本數據結構 Stack<Integer> st = new Stack<>();
+        > 存放基本 數據類型
+          > byte short int long float double
+          > int a = 1;
+        > 引用對象的變量
+          > int[] array = new int[]{1,2};
+          > 實際上 引用對象 只是存放的是 地址
+        > 栈内存是线程 私有的。
+   3. 方法區
+      > 包含了所有的 class 、 static 變量 、 final 常量
+      > 方法區内存是所有线程 共有的。
+      >
+      >
+      >
+      >
+      >
+   4. 簡單的來講：
+      堆（heap）上分配的內存，系統不釋放，而且是動態分配的。
+      棧（stack）上分配的內存系統會自動釋放，它是靜態分配的。
+   5.
+   6.
+   7.
+
+</body>
+</html>

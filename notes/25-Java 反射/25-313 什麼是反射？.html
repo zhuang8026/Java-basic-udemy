@@ -21,6 +21,7 @@
             -> 正常： String str = new String();
             -> 反射： Person person = new Student(); // 實例化對象
                       Class c1 = person.getClass(); // 使用 reflection getClass method 來取得 完整類的訊息
+                      Class c1 = person.getSimpleNmae(); // 取得 類 名
             -> 反射要求：但我們要獲得某一個 類 時候，那個 類 必須要在某一個 包 中！所以必須放在 某一個包 下。
             ->
    2. Java 算是"准動態語言"，因為java有一定的動態性，我們可以利用反射機制來獲得類似動態語言的特性。
@@ -29,7 +30,9 @@
         可以實現動態創建對象和編譯。體現出很大的靈活性
       缺點：
         對性能有影響。反射是一種解釋性的操作，就是告訴jvm我們想要做什麼，但這種方式比我們直接 實例化 要慢的很多
-   4.
+
+   4. 為什麼要用 反射？
+      -> 有時候你的class name 或是 filed name是動態的
    5.
    6.
    7.

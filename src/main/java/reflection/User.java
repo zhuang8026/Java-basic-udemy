@@ -9,6 +9,10 @@ public class User {
   public User() {
   }
 
+  private User(String id) {
+    System.out.println("private User:" + id);
+  }
+
   public User(String id, String name, int age) {
     this.id = id;
     this.name = name;

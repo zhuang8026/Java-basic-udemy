@@ -9,8 +9,7 @@ public class JDBCMysqlDemo {
 
         String SQL_SELECT = "select * from Course";
 
-        Connection conn = DriverManager.
-                getConnection("jdbc:mysql://127.0.0.1:3306/jdbc_demo", "root", "my-secret-pw");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbc_demo", "root", "my-secret-pw");
         if (conn != null) {
             System.out.println("Connected to the database!");
         } else {

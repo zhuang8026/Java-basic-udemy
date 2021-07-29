@@ -20,5 +20,6 @@ public class 正則表達式 {
     for(String ss: d){
       System.out.println(ss);
     }
+    System.out.println("這是測試");
   }
 }

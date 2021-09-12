@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JDBC - 常用接口</title>
+</head>
+<body>
+
+    desc : https://juejin.cn/post/6844903650741993486
+    demo :
+
+    JDBC - 常用接口
+    1. Driver
+    2. Connection interface
+        -> Connection與特定數據庫的連接（會話），在連接上下文中執行sql語句並返回結果。
+        -> ex:
+            DriverManager.getConnection(url, user, password)
+            -> 方法建立在JDBC URL中定義的數據庫Connection連接上。
+        ->
+            createStatement()：創建向數據庫發送sql的 statement 對象,返回的是 statement 實例。
+            prepareStatement(sql) ：創建向數據庫發送預編譯sql的PrepareSatement對象。
+            prepareCall(sql)：創建執行存儲過程的callableStatement對象。
+            setAutoCommit(boolean autoCommit)：設置事務是否自動提交。
+            commit() ：在鏈接上提交事務。
+            rollback() ：在此鏈接上回滾事務。
+
+    3. Statement interface
+        -> 三種 Statement 類：
+            Statement： 由createStatement 創建，用於發送 簡單的SQL語句（不帶參數）。
+            PrepareStatement： 繼承了來自 Statement 藉口，由 preparedStatement 創建，用於發送 複雜的SQL語句（含參數）。
+            CallableStatement：繼承來自PreparedStatement接口，由 prepareCall 創建，用於 儲存。
+        ->
+    4. Statement methods (常用的方法)
+        ->
+            execute(String sql)      ：運行語句，返回是否有結果集 / 返回 boolean
+            executeQuery(String sql) ：運行select語句，返回ResultSet結果集。
+            executeUpdate(String sql)：運行insert/update/delete操作，返回更新的行數。
+            addBatch(String sql)     ：可添加SQL語法，並放在一個儲存空間等待執行。
+            executeBatch()           ：將addBatch()添加的SQL 向 數據庫 發送 並所有添加的SQL 語句執行。
+
+    4. ResultSet接口
+        ex:(
+            PreparedStatement preparedStatements = conn.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatements.executeQuery();
+        )
+        ->
+        getString(int index)  or  getString(String columnName)： 获得在数据库里是varchar、char等类型的数据对象。
+        getFloat(int index)   or  getFloat(String columnName)：  获得在数据库里是Float类型的数据对象。
+        getDate(int index)    or  getDate(String columnName)：   获得在数据库里是Date类型的数据。
+        getBoolean(int index) or  getBoolean(String columnName)：获得在数据库里是Boolean类型的数据。
+        getObject(int index)  or  getObject(String columnName)： 获取在数据库里任意类型的数据。
+
+        ResultSet接口 还提供了对结果集进行滚动的方法：
+        ->
+            next()：移动到下一行
+            Previous()：移动到前一行
+            absolute(int row)：移动到指定行
+            beforeFirst()：移动resultSet的最前面。
+            afterLast() ：移动到resultSet的最后面。
+
+    5. 使用后依次关闭对象及连接：
+        ->
+            ResultSet → Statement → Connection
+    6.
+    7.
+    8.
+
+
+</body>
+</html>

@@ -42,6 +42,15 @@ public class Course {
         this.title = title;
     }
 
+
+    public String getNumOfCredits() {
+        return numOfCredits;
+    }
+
+    public void setNumOfCredits(String numOfCredits) {
+        this.numOfCredits = numOfCredits;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
@@ -52,15 +61,5 @@ public class Course {
                 ", numOfCredits='" + numOfCredits + '\'' +
                 '}';
     }
-
-    public String getNumOfCredits() {
-        return numOfCredits;
-    }
-
-    public void setNumOfCredits(String numOfCredits) {
-        this.numOfCredits = numOfCredits;
-    }
-
-
 
 }

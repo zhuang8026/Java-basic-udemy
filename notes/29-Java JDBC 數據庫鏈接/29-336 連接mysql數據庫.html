@@ -6,28 +6,47 @@
 </head>
 <body>
 
-   desc : http://tw.gitbook.net/jdbc/jdbc_quick_guide.html
-   demo :
-  JDBC (java DateBase Connectivity)
-   3. 如何安裝 java mysql ?
-        > google > java mysql maven repo
-        > url : https://mvnrepository.com/artifact/mysql/mysql-connector-java
-        > Central
-          > 8.0.25
-            > Maven
-              > copy 依賴!
-                >  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-                   <dependency>
-                     <groupId>mysql</groupId>
-                     <artifactId>mysql-connector-java</artifactId>
-                     <version>8.0.25</version>
-                   </dependency>
-              > 放入 "pom.xml" 的 <dependencies> .... </dependencies> 中
-                > 要記得安裝 "auto-import"
-   4.
-   5.
-   6.
-   7.
+    desc : http://tw.gitbook.net/jdbc/jdbc_quick_guide.html
+    demo :
+        JDBC (java DateBase Connectivity)
+        3. 如何安裝 java mysql diver ?
+            > google
+                > java mysql maven repo
+                > 會到達 url : https://mvnrepository.com/artifact/mysql/mysql-connector-java
+                    > tab -> Central
+                      > list -> 8.0.25
+                        > tab -> Maven
+                          > copy 依賴(inner)!
+                            > Inner 以下：
+                            ------------- 複製下面 start -------------
+                                <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+                                <dependency>
+                                    <groupId>mysql</groupId>
+                                    <artifactId>mysql-connector-java</artifactId>
+                                    <version>8.0.25</version>
+                                </dependency>
+                            ------------- end -------------
+
+            > 將 <dependencies> .... </dependencies> 放到 "pom.xml" 中
+                > 會跳出 "auto-import", 要記得安裝
+   4. DriverManager 是內建
+        -> DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/databaseName", "用戶名", "密碼");
+            -> 連結失敗 return null
+            -> 連結成功 return object
+
+   5. prepareStatement 將 mysql 寫入並去取得 DB 中 指定table的對象。(重點：還沒有query，所以會暫時看不到資料)
+   6. executeQuery 對取得table的對象，查詢並返回 ResultSet 結果
+        -> ex :
+            PreparedStatement preparedStatements = conn.prepareStatement(SQL_SELECT); // 返回prepareStatement對象
+            ResultSet resultSet = preparedStatements.executeQuery(); // 查詢並返回 ResultSet 結果
+   7.ResultSet
+        -> resultSet.next() next() 方法用於返回給定列表中的下一個元素。（ 類似於 forEach() ）
+   8.
+
+
+
+
+
 
 </body>
 </html>

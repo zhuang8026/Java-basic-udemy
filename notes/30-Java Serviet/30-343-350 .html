@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    1. Servlet接口 和 類
+        -> HttpServlet
+            -> GenericServlet
+                -> ServletConfig (interface)
+                -> Servlet      (interface)
+        -> service
+                desc: HttpServlet 的調度器
+                    -> doGet
+                    -> doPost
+                -> HttpServletRequest
+                    -> getParameter 取得前端傳過來的資料
+                        -> frontEnd: <input type="text" name="lastName">&nbsp;
+                        -> backEnd:  request.getParameter("lastName");
+                -> HttpServletResponse
+    2. web.xml
+        -> 這是url入口也是文件引入存放地
+    3.
+    4. 前後端基本溝通
+        ->  <form method="get" action="http://localhost:8080/XXXXXXXX">
+                <input type="text" name="lastName">&nbsp;
+            </form>
+        -> String lastName = request.getParameter("lastName");
+
+    ------------------------ /* 3種 前後端溝通存儲資料方式 */ ------------------------
+    5-1. Hidden Value
+        -> BackEnd:
+            (doGet) out.println("<p><input type="hidden" value={lastName} name="lastName">");
+            (doGet) out.println("<p><input type="submit" value="Confirm" >"); // 上面都是隱藏input
+            (doPost) String lastName = request.getParameter("lastName");
+
+    5-2.  Cookies
+        -> BackEnd:
+            1. import javax.servlet.http.Cookie;
+            2.(doGet)
+                (doGet)  String lastName = request.getParameter("lastName");
+                (doGet)  Cookie cookieLastName = new Cookie("lastName", lastName);
+                (doGet)  response.addCookie(cookieLastName);
+            3.(doPost)
+                (doPost) Cookie[] cookies = request.getCookies(); // Read the cookies
+                (doPost) ForEach -> if(cookies[i].getName().equals("lastName")) { lastName = cookies[i].getValue(); }
+                (doPost) 最後在傳入DB
+    5-3.  HttpSession
+        -> BackEnd:
+            1. import javax.servlet.http.HttpSession; // HttpSession 是 servlet的API
+            2.(doGet)
+                (doGet)  String lastName = request.getParameter("lastName");
+                (doGet)  Address address = new Address();  // Create an Address object
+                            -> address.setLastName(lastName);
+                (doGet)  HttpSession httpSession = request.getSession();
+                            -> httpSession.setAttribute("address", address); // 將資料塞入 httpSession 給 doPost 使用
+            3.(doPost)
+                (doPost)  HttpSession httpSession = request.getSession();
+                            ->  Address address = (Address) (httpSession.getAttribute("address"));
+                (doPost)  saveToDB(address);
+
+            * Address : 是自己創建的類
+                ->  private String firstName;
+                ->  public String getFirstName() { return firstName; }
+                ->  public void setFirstName(String firstName) { this.firstName = firstName; }
+
+</body>
+</html>

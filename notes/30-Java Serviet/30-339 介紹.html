@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    download : https://tomcat.apache.org/
+
+   0. JSP => JavaServer Pages
+
+   1. Java Servlet 是運行在 web 服務器 或者 應用服務器上的程序
+   2. 動態頁面請求(使用CGI)
+        -> Common Gateway interface 共通閘道介面
+        -> 說明: 其實流程 和 Servlet 流程一樣
+            -> web Browser -> web Server -> Machine file system 中尋找 Servlet 文件 ->
+
+   3. 注意： idea 版本不一樣, 所以安裝順序和介面都會有所不同
+        1. 創建servlet
+            -> File
+                -> Projcet
+                    -> java Enterprise
+                        -> project template: Web application
+                        -> location: "安裝路徑自己設定"
+                    -> finish
+        2. 檢查文件
+            -> web -> WEB-INF (有 ？)
+        3. 文件設定（配置項目的目錄結構）
+            -> 先選擇 WEB-INF
+                -> File -> Project Structure
+                    -> Moudule
+                        -> Sources
+                            -> create classes files (存放編譯好的文件)
+                            -> create lib files (依賴庫)
+                            -> create src files (目錄/需要標記成 Sources(右鍵可看到))
+
+                        -> Patchs
+                            -> Output path: '改成指向 classes files'
+                            -> Test output path: '改成指向 classes files'
+
+                        -> Dependencies
+                            -> 選擇1.8 並且 按下 '+'，選擇第一個'1 JARs or directories...'
+                                -> 指向 'lib files'(open)
+                                    -> 出現pop 選擇 jar Directory（ok）
+                                    -> 勾選剛剛添加的路徑（checkbox）
+                        ----> 最後 Apply and ok （finish）
+
+   4. 安裝 servlet 容器 (Tomcat)
+        -> https://tomcat.apache.org/
+            -> Tomcat 9.0
+                -> Binary Distributions （編譯好的 二進制代碼）
+                    -> mac: tar.gz (pgp, sha512)
+
+        -> 使用 tomcat
+        /* 以下為 create template action */
+            -> Run (tag)
+            -> Edit configurations...
+                -> Tomcat Server
+                    -> Local
+                        -> Application server: "" [configure]
+                            -> 點擊 [configure] (配置路徑)
+                                -> Tomcat Home (點擊右側 files icon)
+                                    -> 選擇剛剛download的 'apache-tomcat-9.0.30'
+                                    -> ok
+        /* 以下為 create tomcat */
+            -> Run (tag)
+                -> Edit configurations...
+                    -> '+' (click)
+                        -> Tomcat Server
+                            -> Local
+                                -> Deployment (tag)
+                                    -> '+' (左下方點擊)
+                                        -> Artfact... (click)
+                                            servletDemoFast:war exploded (選擇 or 自動出現)
+                                    -> Appcation context: '/' (路徑只要 '/')
+            -> apply
+            -> ok
+        -> 測試 -> 右鍵 run or 右上角 Run icon
+    5.
+    6.
+    7.
+
+</body>
+</html>

@@ -27,20 +27,20 @@ public class GuessNumber {
 //    } // End of loop
 //  }
 
-  public static void main(String[] args) {
-    int number = (int) (Math.random() * 100);
-    Scanner input = new Scanner(System.in);
-    int guess = -1;
-    while (guess != number) {
-      System.out.println("請輸入你猜測的值：");
-      guess = input.nextInt();
-      if (guess == number) {
-        System.out.println("配對成功");
-      } else if (guess > number) {
-        System.out.println("太大了");
-      } else {
-        System.out.println("太小了");
-      }
+    public static void main(String[] args) {
+        int number = (int) (Math.random() * 100);
+        Scanner input = new Scanner(System.in);
+        int guess = -1;
+        while (guess != number) {
+            System.out.println("請輸入你猜測的值：");
+            guess = input.nextInt();
+            if (guess == number) {
+                System.out.println("配對成功");
+            } else if (guess > number) {
+                System.out.println("太大了");
+            } else {
+                System.out.println("太小了");
+            }
+        }
     }
-  }
 }

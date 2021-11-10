@@ -13,7 +13,7 @@ public abstract class Dog implements Animal, Person, Serializable {
         System.out.println("汪汪旺財會講話");
     }
 
-    public void test(){
+    public void test() {
         System.out.println("Dog（abstract）itself mrthods");
     }
 }

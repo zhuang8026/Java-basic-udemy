@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    1. JSP中允許使用javaBeans
+    2. JSP允許我們在不同的網頁中共享一個對象，為了確保從組建是可以共享的，對象所屬的類必須是 JavaBeans組件
+    3.  JavaBeans組件 三大特點
+        3-1. the class is public. (必須用public修飾符)
+        3-2. the class has a public constructor with no arguments. (必須要有一個共用無參的構造方法)
+        3-3. the class is serializable. (類要可序列化，但不是必須)
+
+    4. how to use javaBeans ?
+        <jsp:useBean id="給java對象取一個ID" scope="作用域" class="java 對象"></jsp:useBean>
+            -> id 自定義名稱
+            -> scope 當前對象的作用域
+                application
+                session
+                request
+            -> class 當前的實現類
+        說明: 我們給 java 對象 取了一個id name, 並且給他一個 scope 作用域, class 是要實現的類
+
+    --------- Jsp 設置喝獲取屬性 ---------
+    5. 獲取
+        5.1 和 5.2 是等價的:
+        5.1-> <jsp:getProperty name="william" property="age"/>
+        5.2-> <%= william.getAge() %>
+    6. 設定
+        6.1 和 6.2 是等價的:
+        6.1-> <jsp:setProperty name="william" property="age" value=""30"/>
+        6.2-> <% william.setAge(30); %>
+    7.  property="*"
+        desc: 通配符，將表單name val 和 java對象實例 一一對應
+
+    --------- Jsp 轉交 ---------
+    重點: forward
+    ex: <jsp:forward page="nextPage"/>
+            -> page 是要轉交的頁面
+    ex: <% if(DB.connection() === null){ %>
+            Error 404
+        <% }else{ %>
+            <jsp:forward page="Table.jsp"/> // 如果DB 連結成功，就轉到 Table.jsp 中
+        <% } %>
+
+
+</body>
+</html>

@@ -11,7 +11,7 @@ public class JDBCMySqlTest01 {
 
         Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/databaseName", "william", "123");
 
-        if(conn != null){
+        if (conn != null) {
             System.out.println("connected to the database!");
         } else {
             System.out.println("failed to make connection!");
@@ -25,7 +25,7 @@ public class JDBCMySqlTest01 {
         List<Course> courseList = new ArrayList<Course>();
 
         while (resultSet.next()) { // 接口的 next() 方法用於返回給定列表中的下一個元素。
-                                   // [1,2,3] => next() => 1 => 2 => 3
+            // [1,2,3] => next() => 1 => 2 => 3
             String courseId = resultSet.getString("courseId"); // getString 是 ResultSet 提供的方法
             String subjectId = resultSet.getString("subjectId");
             String courseNumber = resultSet.getString("courseNumber");

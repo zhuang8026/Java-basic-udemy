@@ -12,7 +12,7 @@ public class ParallelArraySorting {
         }
         // Sorting array elements parallel  
 //        Arrays.parallelSort(arr);
-        Arrays.parallelSort(arr,1,3);
+        Arrays.parallelSort(arr, 1, 3);
         System.out.println("\nArray elements after sorting");
         // Iterating array elements  
         for (int i : arr) {

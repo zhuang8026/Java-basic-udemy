@@ -2,29 +2,29 @@ package generic;
 
 import java.util.ArrayList;
 
-public class  GenericStack<E> {
+public class GenericStack<E> {
 
-  private ArrayList<E> list = new ArrayList();
+    private ArrayList<E> list = new ArrayList();
 
-  public int getSize() {
-    return list.size();
-  }
+    public int getSize() {
+        return list.size();
+    }
 
-  public E peek() {
-    return list.get(getSize() - 1);
-  }
+    public E peek() {
+        return list.get(getSize() - 1);
+    }
 
-  public void push(E o) {
-    list.add(o);
-  }
+    public void push(E o) {
+        list.add(o);
+    }
 
-  public E pop() {
-    E obj = list.get(getSize() - 1);
-    list.remove(getSize() - 1);
-    return obj;
-  }
+    public E pop() {
+        E obj = list.get(getSize() - 1);
+        list.remove(getSize() - 1);
+        return obj;
+    }
 
-  public boolean isEmpty() {
-    return list.size() == 0;
-  }
+    public boolean isEmpty() {
+        return list.size() == 0;
+    }
 }

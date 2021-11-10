@@ -15,7 +15,8 @@ public class CopyAnArray {
         int[] c = a.clone();
         for (int item : c) {
             System.out.println(item);
-        }    }
+        }
+    }
 
     public static int[] copyAnArray(int src[]) {
         int des[] = new int[src.length];

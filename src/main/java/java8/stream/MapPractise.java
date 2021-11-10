@@ -10,14 +10,14 @@ import java.util.Map;
  */
 public class MapPractise {
 
-  public static void main(String[] args) {
-    Map<String, Double> map = new HashMap<>();
-    map.put("john", 1.5);
-    map.put("Peter", 1.1);
-    map.put("Kobe", 2.4);
+    public static void main(String[] args) {
+        Map<String, Double> map = new HashMap<>();
+        map.put("john", 1.5);
+        map.put("Peter", 1.1);
+        map.put("Kobe", 2.4);
 
-    System.out.println(map.entrySet().stream().mapToDouble(e -> e.getValue()).sum());
+        System.out.println(map.entrySet().stream().mapToDouble(e -> e.getValue()).sum());
 
-  }
+    }
 
 }

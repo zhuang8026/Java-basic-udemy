@@ -6,13 +6,13 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Book {
-	public long id;
-	public String name;
-	public String author;
+    public long id;
+    public String name;
+    public String author;
 
-	public String isbn;
+    public String isbn;
 
-	public List<String> tags;
-	public LocalDate pubDate;
-	public BigDecimal price;
+    public List<String> tags;
+    public LocalDate pubDate;
+    public BigDecimal price;
 }

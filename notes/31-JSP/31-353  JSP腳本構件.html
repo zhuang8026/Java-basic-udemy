@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+   1. 表達式 expression
+        ex: <%= XXXX %>  (是 <% out.println(变量) %>)
+   2. 小腳本 scriptlet
+        ex: <% XXXX %> (写java代码)
+   3. 聲明 declaration
+        ex: <%! XXXX %> (var可设置该页面的全局变量)
+   ----------------------------------------------------
+   ex:
+        <% for(int i=0; i <=10; i++){ %>
+            分數 <%= i %> 是 <%= function(i) %>
+        <% } %>
+        <%! private long function(int i){
+            if(i == 0) {
+                return 1;
+            } else {
+                return i * function(i -1);
+            }
+        } %>
+
+   4. JSP 註解
+        ex: <!-- HTML -->
+        ex: <%-- JSP --%>
+   5.
+   6.
+   7.
+
+</body>
+</html>

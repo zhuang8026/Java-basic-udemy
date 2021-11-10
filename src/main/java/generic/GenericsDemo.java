@@ -15,14 +15,14 @@ public class GenericsDemo {
         ArrayList list = new ArrayList();
         list.add(1);
         list.add(2);
-        for(Object ls : list){
+        for (Object ls : list) {
             System.out.println(ls);
         }
-        for(String lsv2 : arrayList){
+        for (String lsv2 : arrayList) {
             System.out.println(lsv2);
         }
         System.out.println("------------");
-        for(int i=0; i<list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
     }

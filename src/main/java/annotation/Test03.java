@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
 @MyAnnotation
 public class Test03 {
 
-	@MyAnnotation
-	public void testAnnotation() {
+    @MyAnnotation
+    public void testAnnotation() {
 
-	}
+    }
 
 }
 

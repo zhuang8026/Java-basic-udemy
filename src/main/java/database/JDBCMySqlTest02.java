@@ -18,7 +18,7 @@ public class JDBCMySqlTest02 {
         // 重點： 打開就要記得 connection 關閉！！！！
         Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/databaseName", "william", "123");
 
-        if(conn != null){
+        if (conn != null) {
             System.out.println("connected to the database!");
         } else {
             System.out.println("failed to make connection!");
@@ -26,7 +26,7 @@ public class JDBCMySqlTest02 {
 
         // 創建 statement 實例
         Statement statement = conn.createStatement();
-        boolean flag =  statement.execute(SQL_SELECT); //  返回 true / boolean
+        boolean flag = statement.execute(SQL_SELECT); //  返回 true / boolean
         System.out.println("flag:" + flag);
 
         int LineNumber = statement.executeUpdate(UPDATE_SQL); // 返回 1, 因為只影響了1行 （返回更新的行數）

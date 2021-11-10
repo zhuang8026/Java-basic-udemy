@@ -9,7 +9,7 @@ interface Sayable {
     // Abstract method
     void sayMore(String msg);
 
-    static void sayLounder(String msg){
+    static void sayLounder(String msg) {
         System.out.println(msg);
     }
 

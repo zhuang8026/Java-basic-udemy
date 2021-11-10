@@ -11,8 +11,8 @@ public class JDBCMysqlDemo2 {
         String SQL_SELECT = "select * from Course";
         String UPDATE_SQL = "UPDATE `jdbc_demo`.`Course` t SET t.`numOfCredits` = 10 WHERE t.`courseId` = 3";
 
-        String insert_sql_1="INSERT INTO `jdbc_demo`.`Course` (`subjectId`, `courseNumber`, `title`, `numOfCredits`) VALUES ('chinese1', 2, 'chinese1', 5)";
-        String insert_sql_2="INSERT INTO `jdbc_demo`.`Course` (`subjectId`, `courseNumber`, `title`, `numOfCredits`) VALUES ('chinese2', 5, 'chinese2', 5)";
+        String insert_sql_1 = "INSERT INTO `jdbc_demo`.`Course` (`subjectId`, `courseNumber`, `title`, `numOfCredits`) VALUES ('chinese1', 2, 'chinese1', 5)";
+        String insert_sql_2 = "INSERT INTO `jdbc_demo`.`Course` (`subjectId`, `courseNumber`, `title`, `numOfCredits`) VALUES ('chinese2', 5, 'chinese2', 5)";
 
         Connection conn = DriverManager.
                 getConnection("jdbc:mysql://127.0.0.1:3306/jdbc_demo", "root", "my-secret-pw");

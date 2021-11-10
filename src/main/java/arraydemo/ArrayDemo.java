@@ -125,7 +125,7 @@ public class ArrayDemo {
             // 1 = 0 , 112345
         }
 
-        for (int e: myListss)
+        for (int e : myListss)
             System.out.print(e + " ");
 
         System.out.println(" ");

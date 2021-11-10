@@ -6,8 +6,8 @@ import java.nio.file.FileAlreadyExistsException;
 
 public class DeclareExceptionDemo {
 
-  public void myMethod() throws IOException,FileNotFoundException, FileAlreadyExistsException {
+    public void myMethod() throws IOException, FileNotFoundException, FileAlreadyExistsException {
 
-  }
+    }
 
 }

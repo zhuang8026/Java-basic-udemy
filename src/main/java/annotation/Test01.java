@@ -2,9 +2,9 @@ package annotation;
 
 public class Test01 {
 
-  @Override
-  public String toString() {
+    @Override
+    public String toString() {
 
-    return "Test01{}";
-  }
+        return "Test01{}";
+    }
 }

@@ -9,7 +9,7 @@ public class WhileLoopDemo {
             counter++;
         }
 
-        while (true){
+        while (true) {
             System.out.println("never end loop");
         }
     }

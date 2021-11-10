@@ -1,11 +1,11 @@
 package java8;
 
-interface talk{
+interface talk {
 
 }
 
 @FunctionalInterface
-interface sayable extends talk{
+interface sayable extends talk {
     void say(String msg);   // abstract method
 
     // It can contain any number of Object class methods.

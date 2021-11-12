@@ -6,9 +6,10 @@ interface Sayable {
         System.out.println("Hello, this is default method");
     }
 
-    // Abstract method
+    // Abstract method 抽象方法
     void sayMore(String msg);
 
+    // 如果不是 Default，就必須是 static
     static void sayLounder(String msg) {
         System.out.println(msg);
     }
@@ -17,6 +18,8 @@ interface Sayable {
 }
 
 public class SayableDemo implements Sayable {
+
+    // 接口裡面的方法 強制重寫(非default & 非sayLounder)
     public void sayMore(String msg) {        // implementing abstract method
         System.out.println(msg);
     }

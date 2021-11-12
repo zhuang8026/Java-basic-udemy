@@ -38,8 +38,28 @@ public class LambdaDemo {
 
         System.out.println("=================================================");
 
+        for (int i = 1; i <= list.size(); i++) {
+            System.out.println(i);
+        }
+
+        System.out.println("=================================================");
+
         list.forEach((item) -> {
             System.out.println(item);
+        });
+
+        System.out.println("=================================================");
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("hello world");
+            }
+        });
+
+        // for lambda
+        new Thread(() -> {
+            System.out.println("hello world");
         });
     }
 

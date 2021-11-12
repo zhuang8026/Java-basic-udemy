@@ -6,6 +6,10 @@ interface talk {
 
 @FunctionalInterface
 interface sayable extends talk {
+    /**
+     * 1. 接口裡面的方法 強制重寫(非default & 非sayLounder)
+     * 2. 抽象方法 只能寫在一個 接口內
+     * */
     void say(String msg);   // abstract method
 
     // It can contain any number of Object class methods.
